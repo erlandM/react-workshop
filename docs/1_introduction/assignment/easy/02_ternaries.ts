@@ -11,7 +11,7 @@ export function displayName(
   last?: string | null,
   username?: string | null
 ): string {
-  return first && last ? `${first} ${last}` : username ?? 'Ukjent';
+  return first || last ? `${first} ${last}` : username ? username : 'Ukjent';
 }
 
 // 2) Karakter basert på poeng
@@ -42,8 +42,8 @@ export function countLabel(n: number): string {
 */
 
 console.log(`Answer: ${displayName('Ada', null, 'ada123')}\t\t\tExpected: Ada`);
-console.log(`Answer: ${displayName(undefined, undefined, 'linus')}\t\t\tExpected: linux`);
-console.log(`Answer: ${displayName(undefined, undefined, undefined)}\t\t\tExpected: undefiend`);
+console.log(`Answer: ${displayName(undefined, undefined, 'linux')}\t\t\tExpected: linux`);
+console.log(`Answer: ${displayName(undefined, undefined, undefined)}\t\t\tExpected: Ukjent`);
 
 console.log(`Answer: ${grade(95)}\t\t\tExpected: A`);
 console.log(`Answer: ${grade(81)}\t\t\tExpected: B`);
