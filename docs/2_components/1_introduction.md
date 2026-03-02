@@ -169,6 +169,7 @@ my-vite-app/
 ```
 
 #### Next (mer krav)
+
 Next er et rammeverk for å kjøre mer omfattende React prosjekter og kommer med masse nyttige innebygde funksjoner som routing, middleware, server komponenter/actions, og mye mer. De har en strenger [projekt struktur](https://nextjs.org/docs/app/getting-started/project-structure) fordi den henter ut informasjon fra fil/mappe posisjon.
 
 ```
@@ -186,10 +187,6 @@ my-next-app/
 │  ├─ Button.tsx
 │  └─ Card.tsx
 ```
-
-## Vanlige feil
-
-wip
 
 ---
 
