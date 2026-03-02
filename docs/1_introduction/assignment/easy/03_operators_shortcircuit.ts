@@ -6,20 +6,25 @@
 
 // 1) Nullish fallback – behold '' og 0 som gyldige verdier
 export function safeTitle(input: string | number | null | undefined, fallback: string): string {
-  // TODO: bruk ??
-  return '';
+  return (input ?? fallback).toString();
 }
 
 // 2) Vis tekst om cond er "truthy" – ellers tom streng
 export function showIf(cond: unknown, text: string): string {
-  // TODO: bruk &&
-  return '';
-}
+  if (cond) {
+    return text;
+  } 
+  else {
+    return '';
+}}
 
 // 3) Korrekt fallback som returnerer et tall, hvis tallet ikke er en positiv integer returner 0
 export function fallbackZero(n: number | null | undefined): number {
-  // TODO: bruk ??
-  return 0;
+  if (n>0 && Number.isInteger(n)) {
+    return n;
+  }
+  else {    return 0;
+  }
 }
 
 // 4) Streng sammenligning (strict equality), pass på typen!
