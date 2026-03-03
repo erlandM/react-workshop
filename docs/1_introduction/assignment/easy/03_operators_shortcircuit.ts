@@ -20,23 +20,36 @@ export function showIf(cond: unknown, text: string): string {
 
 // 3) Korrekt fallback som returnerer et tall, hvis tallet ikke er en positiv integer returner 0
 export function fallbackZero(n: number | null | undefined): number {
-  if (n>0 && Number.isInteger(n)) {
+  if (Number.isInteger(n)&&n!=null && n!=undefined && n>0) {
     return n;
   }
-  else {    return 0;
+  else {    
+    return 0;
   }
 }
 
 // 4) Streng sammenligning (strict equality), pass på typen!
 export function isExactZero(n: number|string): boolean {
-  // TODO: bruk ===
-  return false;
+  if (typeof(n) === "number" && n===0) {
+    return true;
+  }
+  else if (typeof(n) === "string" && n==="0") {
+    return true;
+  }
+  else {
+    return false;
+  }
+  
 }
 
 // 5) sørg for at tallet er innenfor min og max
 export function isInRange(n: number, min: number, max: number): boolean {
-  // TODO: bruk Math.min/Math.max eller sammenligninger
-  return false;
+  if (n > min && n < max) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /** -------------------------- Self-check ---------------------------- 
