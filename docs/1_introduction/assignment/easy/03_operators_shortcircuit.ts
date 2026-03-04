@@ -30,12 +30,7 @@ export function fallbackZero(n: number | null | undefined): number {
 
 // 4) Streng sammenligning (strict equality), pass på typen!
 export function isExactZero(n: number|string): boolean {
-  if (typeof(n) === "number" && n===0) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return n === 0;
   
 }
 
