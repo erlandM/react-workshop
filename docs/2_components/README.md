@@ -5,10 +5,10 @@ Denne uken skal vi se på hvordan vi kan gjøre seksjoner av HTML om til kompone
 ## Emner
 
 - [Introduksjon](./1_introduction.md)
-- [Statiske komponenter](./2_static_components.md)
-- [Props](./3_props.md)
-- [Kondisjoner](./4_conditionals.md)
-- [Lister](./5_lists.md)
+- [Props](./2_props.md)
+- [Kondisjoner](./3_conditionals.md)
+- [Lister](./4_lists.md)
+- [Callbacks](./5_callbacks.md)
 
 ### Oppgaver
 
