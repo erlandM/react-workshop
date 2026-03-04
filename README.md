@@ -10,7 +10,7 @@ Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av F
 - [Terminologi](./docs/1_introduction/terminology.md)
 - [Dokumentasjon](./docs/README.md)
   - [Introduksjon](./docs/1_introduction/README.md)
-  - Komponenter
+  - [Komponenter](./docs/2_components/README.md)
   - [States](./docs/3_states/README.md)
   - [Effects](./docs/4_effects/README.md)
 - Oppgaver

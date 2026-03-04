@@ -14,7 +14,11 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
   - [Verktøyene vi bruker](./1_introduction/3_toolchain.md)
   - [Grunnleggende React](./1_introduction/4_react_fundaments.md)
   - [React developer tools](./1_introduction/5_react_developer_tools.md)
-- Komponenter
+- [Komponenter](./2_components/README.md)
+  - [Komponenter intro](./2_components/1_introduction.md)
+  - [Props](./2_components/2_props.md)
+  - [Kondisjoner](./2_components/3_conditionals.md)
+  - [Lister](./2_components/4_lists.md)
 - [States](./3_states/README.md)
   - [What is a state](./3_states/1_what_is_state.md)
   - [State in react](./3_states/2_state_in_react.md)
@@ -30,6 +34,6 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
 ## Oppgaver
 
 - uke 1: [Javascript recap](./1_introduction/assignment/README.md)
-- uke 2: Komponenter
+- uke 2: [Komponenter](./2_components/assignment.md)
 - uke 3: [Tilstander](./3_states/assignment.md)
 - uke 4: [Effekter](./4_effects/assignment.md)
