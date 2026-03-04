@@ -33,9 +33,6 @@ export function isExactZero(n: number|string): boolean {
   if (typeof(n) === "number" && n===0) {
     return true;
   }
-  else if (typeof(n) === "string" && n==="0") {
-    return true;
-  }
   else {
     return false;
   }
@@ -44,12 +41,7 @@ export function isExactZero(n: number|string): boolean {
 
 // 5) sørg for at tallet er innenfor min og max
 export function isInRange(n: number, min: number, max: number): boolean {
-  if (n > min && n < max) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return (n>Math.min(min,max) && n<Math.max(min,max))
 }
 
 /** -------------------------- Self-check ---------------------------- 
