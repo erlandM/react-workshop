@@ -104,6 +104,79 @@ Siden vi ofte brukes begrepene om hverandre er det lett å tenke at de kanskje b
 
 </details>
 
+## Hva er JSX
+
+JSX er et bare en utvidelse av Javascript syntaxen som lar oss inkludere HTML lignende kode i Javascript filen vår og allikevell få full editor støtte. Det er ikke et krav at du bruker JSX for å produsere React kode, du kan bruke ren Javascript, men må du bruke mer tradisjonelle metoder som `createElements` og `appendChild()` for å ligge til elementer. Med JSX ungår du dette og du utnytter React sin mulighet til å kontrollere tilstand på elementer, istedet for av vi forklarer hvordan hvordan UI skal fungere, forklarer vi bare hvordan vi ønsker at den skal se ut.
+
+#### Uten JSX
+
+```js
+import { createElement } from "react";
+
+function Greeting() {
+  return createElement("h1", { className: "greeting" }, "Hello");
+}
+```
+
+#### Med JSX
+
+```jsx
+function Greeting() {
+  return <h1 className="greeting">Hello</h1>;
+}
+```
+
+#### JSX blir om til Javascript
+Det er viktig å huske på at JSX bare er en syntax og at koden blir konvertert til et Javascript objekt filen tolkes av React for å produsere et React element. React bruker disse elementene til å sitte sammen siden. 
+
+#### Logikk og markup
+
+Den største fordelen med JSX er at du kan beholde logikk, HTML og CSS i samme fil, noe som gjør at det er veldig enkelt å endre et komponent uten å måtte leite opp mange forskjellige filer.
+
+```tsx
+function MyIsolatedComponent() {
+  const paragraphText = "All logikk i dette komponentet ligger i denne filen";
+  return (
+    <p id="my-text" style={{ color: "black" }}>
+      {paragraphText}
+    </p>
+  );
+}
+```
+
+#### Curly brackets
+
+For å bruke variabler i JSX syntaxen bruker vi curly-brackes `{ }` som forteller react at vi ønsker å bruke Javascript logikk her. I eksempelt over kunne du se at vi satte inn teksten fra `paragraphText` variablen inn i `<p>` elementet. I kan også i noen tilfeller bruke ren javascript her, vi sier da at vi "escaper JSX"
+
+```jsx
+function CurlyBrackets() {
+  return (
+    <button onClick={() => alert("Javascript inside JSX!")}>Click me!</button>
+  );
+}
+```
+
+#### Attributter
+
+Dere har kanskje lagt merke til at HTML attributter ser litt annerledes ut, dette er fordi at når JSX blir konvertert til Javascript object så blir også alle attributer elementer inneholder konvertert. Siden Javascript har begrensninger på objekt nøkler bruker vi derfor `camelCase` i attribut navn, i tillegg er det flere ord vi ikke kan bruke, f.eks: `class` som istedet er `className`.
+
+```html
+<!-- HTML -->
+<p class onclick onkeydown>Lowercase attributter</p>
+```
+
+```jsx
+/* JSX */
+const paragraph = (
+  <p className onClick onKeyDown>
+    camelCase attributter
+  </p>
+);
+```
+
+> [!IMPORTANT]
+> Alle regler har sine unntak, for attributt navn så er [aria-\*](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) og [data-\*](https://developer.mozilla.org/docs/Learn/HTML/Howto/Use_data_attributes) skrevet på samme måte som i HTML
+
 ## Navnekonvensjoner
 
 På lik linje med mange andre kode språk og rammeverk så har React sine egene navnekonvensjoner vi må eller bør bruke. Under har jeg samlet de mest relevante reglene
