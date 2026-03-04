@@ -8,7 +8,6 @@ Denne uken skal vi se på hvordan vi kan gjøre seksjoner av HTML om til kompone
 - [Props](./2_props.md)
 - [Kondisjoner](./3_conditionals.md)
 - [Lister](./4_lists.md)
-- [Callbacks](./5_callbacks.md)
 
 ### Oppgaver
 
