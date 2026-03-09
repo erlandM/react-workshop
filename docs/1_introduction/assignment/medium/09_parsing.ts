@@ -12,8 +12,16 @@ export function parseQuery(qs: string): Record<string, string> {
   const out: Record<string, string> = {};
   // TODO:
   // - fjern ledende '?'
+  if (qs.startsWith("?")) {
+    qs = qs.slice(1);
+  }
   // - bruk new URLSearchParams(...)
+  const params = new URLSearchParams(qs);
   // - for ... of (params) og legg inn i out (senere forekomst vinner)
+  for (const [key, value] of params) {
+    out[key] = value;
+  }
+
   return out;
 }
 
@@ -21,14 +29,19 @@ export function parseQuery(qs: string): Record<string, string> {
 export function parseUrl(input: string): { path: string; query: Record<string, string> } {
   // TODO:
   // - new URL(input, 'http://example')
+  const url = new URL(input, 'http://example');
   // - hent .pathname og .search
+  const path = url.pathname;
+  const search = url.search;
   // - parseQuery(...)
-  return { path: '', query: {} };
+  const query = parseQuery(search);
+  return { path, query };
 }
 
 /** -------------------------- Self-check ----------------------------
  *  Kjør følgende kommando for å se om koden din kjørte
  *  npx tsx tasks/js-recap/medium/03_url_safe_parser.ts
+ * 
  *  ------------------------------------------------------------------
 */
 console.log(`Answer: ${JSON.stringify(parseQuery('?q=react%20hooks&page=1'))}\tExpected: {"q":"react hooks","page":"1"}`);
