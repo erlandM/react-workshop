@@ -42,6 +42,6 @@ const u1: User = { id: 1, name: "Ada" };
 const u2: User = { id: 2, name: "Linus", address: { city: "Bergen" } };
 
 // 3) Lag en type hvor status kun kan være: idle, laoding, success eller error
-type Status = ""
+type Status = "Idle" | "Loading" | "Success" | "Error";
 
-const webpageStatus: Status = ""
+const webpageStatus: Status = "Idle";
