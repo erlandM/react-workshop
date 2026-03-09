@@ -8,50 +8,58 @@
 
 // 1) doubleAll: returner ny liste med alle tall * 2
 export function doubleAll(nums: number[]): number[] {
-  // TODO: map
-  return [];
+  const numCopy = [...nums];
+  return numCopy.map(n => n*2)
 }
 
 // 2) trimAll: trim whitespace på hvert navn
 export function trimAll(names: string[]): string[] {
-  // TODO: map
-  return [];
+  const namesCopy= [...names]
+  return namesCopy.map(name => name.trim());
 }
 
 // 3) sortedNumbersAsc: returner SORTERT KOPI stigende (ikke mutér input!)
 export function sortedNumbersAsc(nums: number[]): number[] {
-  // TODO: [...nums].sort((a,b)=>a-b)
-  return [];
+  const numCopy = [...nums];
+  numCopy.sort((a, b) => a - b);
+  return numCopy;
 }
 
 // 4) sortedNumbersDesc: returner sortert kopi synkende
 export function sortedNumbersDesc(nums: number[]): number[] {
-  // TODO
-  return [];
+  const numCopy = [...nums];
+  numCopy.sort((a, b) => b - a);
+  return numCopy;
 }
 
 // 5) case-insensitive sort på strenger (kopi)
 export function sortedNamesCaseInsensitive(names: string[]): string[] {
-  // TODO:
-  return [];
+  const namesCopy = [...names]
+  namesCopy.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase(),"nb"));
+  return namesCopy;
 }
 
 // 6) sorter objekter på 'name' (A→Å) som kopi
 type User = { id: number; name: string; age: number };
 export function sortUsersByName(users: User[]): User[] {
-  // Tips: bruk localeCompare på name
-  return [];
+  // Todo: bruk localeCompare på name
+  const usersCopy = [...users];
+  usersCopy.sort((a, b) => a.name.localeCompare(b.name));
+  return usersCopy;
 }
 
 // 7) sorter objekter på 'age' (lav→høy) som kopi
 export function sortUsersByAge(users: User[]): User[] {
   // TODO: numerisk sortering
-  return [];
+  const usersCopy = [...users];
+  usersCopy.sort((a,b) => a.age - b.age);
+  return usersCopy;
 }
 
 /** -------------------------- Self-check ----------------------------
  *  Kjør følgende kommando for å se om koden din kjørte
  *  npx tsx tasks/js-recap/medium/01_array_map_sort.ts
+ *  npx tsx /workspaces/react-workshop/docs/1_introduction/assignment/medium/07_array_map_sort.ts
  *  ------------------------------------------------------------------
 */
 const nums = [3, 1, 2];
