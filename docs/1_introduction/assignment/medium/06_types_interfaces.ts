@@ -28,10 +28,13 @@ const person2: Person = {
 
 // 2) Bruk interfaces inni interfaces
 interface Address {
-
+  city: string;
 }
 
 interface User {
+  id: number;
+  name: string;
+  address?: Address;
   
 }
 
