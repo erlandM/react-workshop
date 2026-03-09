@@ -5,7 +5,13 @@
  */
 
 // 1) Lag en interface som passer for både person1 og person2 (tips: bruk valgfrie felter med ? der det trengs)
-interface Person {}
+interface Person {
+  name: string;
+  age?: number;
+  hobbies: string[];
+  isAdmin?: boolean;
+  joined: Date;
+}
 
 const person1: Person = {
   name: "Åge",
