@@ -76,10 +76,10 @@ button:focus-visible {
   width: 100%;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
-  background-color: #1a1a1a;
+  background-color: yellow;
   gap: 2em;
   padding: 1em;
 }
