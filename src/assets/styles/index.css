@@ -69,9 +69,11 @@ button:focus-visible {
   min-height: 100vh;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
+  height: 50px;
+  width: 100%;
 }
 
 footer {
